@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--
+    ============================================================
+    NOVUSWORKS - PÁGINA PRINCIPAL
+    ============================================================
+    ESTE ARCHIVO SOLO DEFINE LA ESTRUCTURA. Casi nunca hay que tocarlo.
+      - Para agregar proyectos, equipo o servicios  -> js/datos.js
+      - Para cambiar colores, fuentes o espaciados  -> css/styles.css
+      - Para cambiar cómo se dibujan las tarjetas   -> js/main.js
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NovusWorks | Soluciones tecnológicas</title>
+  <meta name="description" content="NovusWorks desarrolla soluciones tecnológicas a la medida. Conoce nuestros proyectos.">
+  <link rel="icon" href="img/logo.png">
+
+  <!-- Tipografía del logo: Space Grotesk (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO / MENÚ ===== -->
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#inicio" aria-label="NovusWorks, ir al inicio">
+        <img src="img/logo.png" alt="" width="36" height="36">
+        <span><b>N</b>ovus<i>W</i>orks</span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#equipo">Equipo</a>
+        <a class="nav-cta" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== INICIO (hero) ===== -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>Soluciones tecnológicas<br>hechas a tu medida.</h1>
+          <p class="hero-text" id="hero-texto"><!-- texto desde datos.js --></p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn-ghost" href="#contacto">Escríbenos</a>
+          </div>
+        </div>
+        <img class="hero-logo" src="img/logo.png" alt="Logo de NovusWorks: letras N y W en bloques isométricos">
+      </div>
+    </section>
+
+    <!-- ===== SERVICIOS (se llena desde datos.js) ===== -->
+    <section class="section alt" id="servicios">
+      <div class="wrap">
+        <h2>Qué hacemos</h2>
+        <p class="lead">Estas son las áreas en las que podemos ayudarte.</p>
+        <div class="grid grid-services" id="lista-servicios"></div>
+      </div>
+    </section>
+
+    <!-- ===== PROYECTOS (se llena desde datos.js) ===== -->
+    <section class="section" id="proyectos">
+      <div class="wrap">
+        <h2>Proyectos</h2>
+        <p class="lead">Una muestra del trabajo que hemos desarrollado.</p>
+        <div class="grid grid-projects" id="lista-proyectos"></div>
+      </div>
+    </section>
+
+    <!-- ===== EQUIPO (se llena desde datos.js) ===== -->
+    <section class="section alt" id="equipo">
+      <div class="wrap">
+        <h2>Equipo</h2>
+        <p class="lead">Las personas detrás de NovusWorks.</p>
+        <div class="grid grid-team" id="lista-equipo"></div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO (correo y redes desde datos.js) ===== -->
+    <section class="section" id="contacto">
+      <div class="wrap contact">
+        <h2>Hablemos de tu proyecto</h2>
+        <p class="lead">Cuéntanos qué necesitas y te respondemos pronto.</p>
+        <a class="contact-mail" id="contacto-correo" href="#"></a>
+        <div class="social" id="contacto-redes"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="site-footer">
+    <div class="wrap">© <span id="anio"></span> NovusWorks. Todos los derechos reservados.</div>
+  </footer>
+
+  <!--
+    ORDEN IMPORTANTE: datos.js debe cargarse ANTES que main.js,
+    porque main.js lee la variable DATOS definida en datos.js.
+  -->
+  <script src="js/datos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
